@@ -16,25 +16,33 @@ app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql=MySQL(app)
 # mysql.init_app(app)
 
-@app.route('/candidatos')
-def secondWindow(name=None):
-    return render_template('minimal.html')
+@app.route('/candidatos/<c_id>')
+def secondWindow(c_id):
+    return render_template('minimal.html', c_id=c_id)
 
 
 
 @app.route('/candidatos/<p_id>/<id>')
-def thirdWindow(id=id, p_id=p_id):
+def thirdWindow(p_id, id):
 	# return render_template('third.window.html')
 
     
 
     cursor=mysql.connection.cursor()
 
-    
+    cursor.execute(''' SELECT pilar from pilar where t_id=%s '''%(p_id))
+
+    t=cursor.fetchall()[0]
+    print t
+    cursor.execute(''' SELECT nombre, apellido, image_url FROM candidates where id=%s '''%(id))
+
+    candidate=cursor.fetchall()[0]
+   
     cursor.execute(''' SELECT id, message, date, hastags, url
-                   username, media_url, profile_image_url FROM tweets''')
+                   username, media_url, profile_image_url FROM tweets where candidate_id=%s and pilar=%s'''%(id,p_id))
+
     messages=cursor.fetchall()
-    return render_template('third-window.html', messages=messages)
+    return render_template('third-window.html', messages=messages, candidate=candidate, pilar=t['pilar'])
 
 
 

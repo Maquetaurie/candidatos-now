@@ -34,7 +34,7 @@
     <![endif]-->
   </head>
   <body>
-    <h1 class="text-center">(Ricky Roselló Nevares) opina sobre (Pilar)</h1>
+    <h1 class="text-center">{{ candidate.nombre }} opina sobre {{ pilar }} </h1>
       
         {% for message in messages %}
             <div class="container">
@@ -42,6 +42,7 @@
                 <h3><i class="fa fa-quote-left" aria-hidden="true"></i>&nbsp; {{ message.message }}<i class="fa fa-quote-right" aria-hidden="true"></i></h3>
                 <p class="lead"></p>
                 <p class="text-right"><small>{{ message.date }}</small></p>
+                <a href="http://www.elnuevodia.com/noticias/politica/nota/rickyrosselloypedropierluisicontinuansucampanaprimarista-2173699/" style="color: #000000; text-decoration: none;"><i class="fa fa-link fa-lg" aria-hidden="true"></i></a>
             </div>
          {% endfor %}
       
