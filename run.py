@@ -1,39 +1,41 @@
+ 
 
 from flask import Flask
-from flask.ext.mysql import MySQL
+from flask.ext.mysqldb import MySQL
 from flask import render_template
 
 
 
-mysql=MySQL()
 app=Flask(__name__)
 #SQL configurations
-app.config['MYSQL_DATABASE_USER'] = 'candidatosnow'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'candidatosnow_hackprma'
-app.config['MYSQL_DATABASE_DB'] = 'candidatosnow'
-app.config['MYSQL_DATABASE_HOST'] = 'candidatosnow.cncvoluhfnku.us-east-1.rds.amazonaws.com'
+app.config['MYSQL_USER'] = 'candidatosnow'
+app.config['MYSQL_PASSWORD'] = 'candidatosnow_hackprma'
+app.config['MYSQL_DB'] = 'candidatosnow'
+app.config['MYSQL_HOST'] = 'candidatosnow.cncvoluhfnku.us-east-1.rds.amazonaws.com'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
-mysql.init_app(app)
+mysql=MySQL(app)
+# mysql.init_app(app)
 
 @app.route('/candidatos')
 def secondWindow(name=None):
     return render_template('minimal.html')
 
 
-@app.route('/candidatos/<id>')
-def infoThirdWindow(id=id):
-	
-	conn=mysql.connect()
-	cursor=conn.cursor()
 
-	
-	cursor.execute(''' SELECT id, message, date, hastags, url
-	               username, media_url, profile_image_url FROM tweets''')
-	rv=cursor.fetchall()
-	return str(rv)
-@app.route('/candidatos/name')
-def thirdWindow(name=None):
-	return render_template('third.window.html')
+@app.route('/candidatos/<p_id>/<id>')
+def thirdWindow(id=id, p_id=p_id):
+	# return render_template('third.window.html')
+
+    
+
+    cursor=mysql.connection.cursor()
+
+    
+    cursor.execute(''' SELECT id, message, date, hastags, url
+                   username, media_url, profile_image_url FROM tweets''')
+    messages=cursor.fetchall()
+    return render_template('third-window.html', messages=messages)
+
 
 
 #   <!doctype html>
@@ -48,5 +50,6 @@ def thirdWindow(name=None):
 # </div>
 
 if __name__ == '__main__':
-	app.debug=True
-	app.run()
+
+    app.debug=True
+    app.run()
