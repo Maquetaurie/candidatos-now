@@ -25,37 +25,19 @@
   </head>
 
   <body>
-    <h1 class="text-center">(Ricky Roselló Nevares) opina sobre (Pilar)</h1>
-      <div class="container">
-        <div class="jumbotron" align="center">
-            <h3><i class="fa fa-quote-left" aria-hidden="true"></i>&nbsp;Los vaivenes políticos han causado que la definición y proyección internacional de Puerto Rico como producto turístico, cambie drásticamente, conforme a la visión particular de cada administración de turno. El turismo de nuestra patria no puede mercadearse como un premio político. No podemos continuar aceptando que la política paralice las estrategias y promociones turísticas. Puerto Rico necesita profesionalizar el turismo. Este modelo nos permite hacer eso, dándole continuidad y solidez a los planes de desarrollo para la industria.&nbsp;<i class="fa fa-quote-right" aria-hidden="true"></i></h3>
-            <p class="lead"></p>
-            <p class="text-right"><small>03-13-2016</small></p>
-            <a href="http://www.elnuevodia.com/noticias/politica/nota/rickyrosselloypedropierluisicontinuansucampanaprimarista-2173699/" style="color: #000000; text-decoration: none;"><i class="fa fa-link fa-lg" aria-hidden="true"></i></a>
-        </div>
-      </div class="container">
-      <div class="container">
-        <div class="jumbotron"  align="center">
-            <h3><i class="fa fa-quote-left" aria-hidden="true"></i>&nbsp;Otra opinion mas cortita y con la misma fecha.&nbsp;<i class="fa fa-quote-right" aria-hidden="true"></i></h3>
-            <p class="lead"></p>
-            <p class="text-right"><small>03-13-2016</small></p>
-            <a href="http://www.elnuevodia.com/noticias/politica/nota/rickyrosselloypedropierluisicontinuansucampanaprimarista-2173699/" style="color: #000000; text-decoration: none;"><i class="fa fa-link fa-lg" aria-hidden="true"></i></a>
-        </div>
-      </div class="container">
-      <div class="container">
-        <div class="jumbotron"  align="center">
-            <h3><i class="fa fa-quote-left" aria-hidden="true"></i>&nbsp;Los vaivenes políticos han causado que la definición y proyección internacional de Puerto Rico como producto turístico, cambie drásticamente, conforme a la visión particular de cada administración de turno. El turismo de nuestra patria no puede mercadearse como un premio político. No podemos continuar aceptando que la política paralice las estrategias y promociones turísticas. Puerto Rico necesita profesionalizar el turismo. Este modelo nos permite hacer eso, dándole continuidad y solidez a los planes de desarrollo para la industria.&nbsp;<i class="fa fa-quote-right" aria-hidden="true"></i></h3>
-            <p class="lead"></p>
-            <p class="text-right"><small>03-13-2016</small></p>
-        </div>
-      </div class="container">
-      <div class="container">
-        <div class="jumbotron"  align="center">
-            <h3><i class="fa fa-quote-left" aria-hidden="true"></i>&nbsp;Otra opinion mas cortita y con la misma fecha.&nbsp;<i class="fa fa-quote-right" aria-hidden="true"></i></h3>
-            <p class="lead"></p>
-            <p class="text-right"><small>03-13-2016</small></p>
-        </div>
-      </div class="container">
+
+    <h1 class="text-center">{{ candidate.nombre }} opina sobre {{ pilar }} </h1>
+      
+        {% for message in messages %}
+            <div class="container">
+            <div class="jumbotron"  align="center">
+                <h3><i class="fa fa-quote-left" aria-hidden="true"></i>&nbsp; {{ message.message }}<i class="fa fa-quote-right" aria-hidden="true"></i></h3>
+                <p class="lead"></p>
+                <p class="text-right"><small>{{ message.date }}</small></p>
+                <a href="http://www.elnuevodia.com/noticias/politica/nota/rickyrosselloypedropierluisicontinuansucampanaprimarista-2173699/" style="color: #000000; text-decoration: none;"><i class="fa fa-link fa-lg" aria-hidden="true"></i></a>
+            </div>
+         {% endfor %}
+      
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
