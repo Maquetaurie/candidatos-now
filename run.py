@@ -21,15 +21,15 @@ def landing():
 
 
     return render_template('first-window.html')
-    
+
 @app.route('/candidatos/<c_id>')
 def secondWindow(c_id):
     return render_template('minimal.html', c_id=c_id)
 
 
 
-@app.route('/candidatos/<p_id>/<id>')
-def thirdWindow(p_id, id):
+@app.route('/candidatos/<id>/<p_id>')
+def thirdWindow(id, p_id):
 	# return render_template('third.window.html')
 
     
@@ -44,11 +44,10 @@ def thirdWindow(p_id, id):
 
     candidate=cursor.fetchall()[0]
    
-    cursor.execute(''' SELECT id, message, date, hastags, url
-                   username, media_url, profile_image_url FROM tweets where candidate_id=%s and pilar=%s'''%(id,p_id))
+    cursor.execute(''' SELECT id, message, date, hastags, url, username, media_url, profile_image_url FROM tweets where candidate_id=%s and pilar=%s'''%(id,p_id))
 
     messages=cursor.fetchall()
-
+    print messages
     return render_template('third-window.html', messages=messages, candidate=candidate, pilar=t['pilar'])
 
 
