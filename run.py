@@ -24,7 +24,7 @@ def landing():
 
 @app.route('/candidatos/<c_id>')
 def secondWindow(c_id):
-    return render_template('minimal.html', c_id=c_id)
+    return render_template('second-window.html', c_id=c_id)
 
 
 

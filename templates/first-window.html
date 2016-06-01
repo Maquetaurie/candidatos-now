@@ -2,48 +2,191 @@
 <html>
 <head>
 
- <title>Candidatos Now</title>
- 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<script src="https://use.fontawesome.com/e47997fa7c.js"></script>
+<!-- <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+ --><link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+
 <style>
 
-.circular-image {
-  border-radius:  50%;
+body {
+    background-color: ccccb3;
 }
 
-.icon {
-float: right;
-    margin: 0 100 0px 0px;
+header.first {
+  padding-bottom: 50px;
+  margin-bottom: 100px;
 }
 
-.foo {
-  float: left;
-  width: 20px;
-  height: 20px;
-  margin: 5px;
-  border: 1px solid rgba(0, 0, 0, .2);
-  background: #13b4ff;
+.circle-container {
+  position: relative;
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+  padding: 0;
+  list-style: none;
+  margin: 5em auto 0;
+  border: solid 5px 000000;
+}
+.circle-container > * {
+  display: block;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  margin: -3em;
+  width: 8em;
+  height: 8em;
+}
+.circle-container > *:nth-of-type(1) {
+  -webkit-transform: rotate(0deg) translate(15em) rotate(0deg);
+          transform: rotate(0deg) translate(15em) rotate(0deg);
+}
+.circle-container > *:nth-of-type(2) {
+  -webkit-transform: rotate(45deg) translate(15em) rotate(-45deg);
+          transform: rotate(45deg) translate(15em) rotate(-45deg);
+}
+.circle-container > *:nth-of-type(3) {
+  -webkit-transform: rotate(90deg) translate(15em) rotate(-90deg);
+          transform: rotate(90deg) translate(15em) rotate(-90deg);
+}
+.circle-container > *:nth-of-type(4) {
+  -webkit-transform: rotate(135deg) translate(15em) rotate(-135deg);
+          transform: rotate(135deg) translate(15em) rotate(-135deg);
+}
+.circle-container > *:nth-of-type(5) {
+  -webkit-transform: rotate(180deg) translate(15em) rotate(-180deg);
+          transform: rotate(180deg) translate(15em) rotate(-180deg);
+}
+.circle-container > *:nth-of-type(6) {
+  -webkit-transform: rotate(225deg) translate(15em) rotate(-225deg);
+          transform: rotate(225deg) translate(15em) rotate(-225deg);
+}
+.circle-container > *:nth-of-type(7) {
+  -webkit-transform: rotate(270deg) translate(15em) rotate(-270deg);
+          transform: rotate(270deg) translate(15em) rotate(-270deg);
+}
+.circle-container > *:nth-of-type(8) {
+  -webkit-transform: rotate(315deg) translate(15em) rotate(-315deg);
+          transform: rotate(315deg) translate(15em) rotate(-315deg);
+}
+
+.circle-container img {
+  display: block;
+  max-width: 100%;
+  border-radius: 50%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  border: solid 5px 000000;
+  -webkit-transition: .15s;
+  transition: .15s;
+}
+.circle-container img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+
+
+
+.circle-container2 > * {
+  display: block;
+  position: absolute;
+  top: 57%;
+  left: 52%;
+  margin: -3em;
+  width: 7em;
+  height: 6em;
+}
+
+.circle-container2 > *:nth-of-type(1) {
+  -webkit-transform: rotate(340deg) translate(5em) rotate(-340deg);
+          transform: rotate(340deg) translate(8em) rotate(-340deg);
+}
+.circle-container2 > *:nth-of-type(2) {
+  -webkit-transform: rotate(45deg) translate(5em) rotate(-45deg);
+          transform: rotate(45deg) translate(8em) rotate(-45deg);
+}
+.circle-container2 > *:nth-of-type(3) {
+  -webkit-transform: rotate(90deg) translate(5em) rotate(-90deg);
+          transform: rotate(90deg) translate(8em) rotate(-90deg);
+}
+.circle-container2 > *:nth-of-type(4) {
+  -webkit-transform: rotate(135deg) translate(5em) rotate(-135deg);
+          transform: rotate(135deg) translate(8em) rotate(-135deg);
+}
+.circle-container2 > *:nth-of-type(5) {
+  -webkit-transform: rotate(180deg) translate(5em) rotate(-180deg);
+          transform: rotate(180deg) translate(8em) rotate(-180deg);
+}
+.circle-container2 > *:nth-of-type(6) {
+  -webkit-transform: rotate(225deg) translate(5em) rotate(-225deg);
+          transform: rotate(225deg) translate(8em) rotate(-225deg);
+}
+.circle-container2 > *:nth-of-type(7) {
+  -webkit-transform: rotate(270deg) translate(5em) rotate(-270deg);
+          transform: rotate(270deg) translate(8em) rotate(-270deg);
+}
+
+.circle-container2 img {
+  display: block;
+  max-width: 50%;
+  border-radius: 50%;
+
+  border: solid 5px 000000;
+  -webkit-transition: .15s;
+  transition: .15s;
 }
 
 </style>
 
+<body>
+
+<header class="w3-container w3-black first">
+<nav>
+  <ul class="pager" style="position:fixed; top:20px;">
+    <li class="previous"><a href="/"> <font size="6" color="black"><i class="fa fa-home" aria-hidden="true"></i></font></a></li>
+  </ul>
+</nav>
+<div align="center">
+  <h1>Candidatos Now</h1>
+</header>
+</div>
+
+<div class="w3-container w3-black first">
+</div>
+
+<ul class='circle-container'>
+  <li><a href="candidatos/1"><img src='http://i981.photobucket.com/albums/ae294/IMYG073090/candidatos-now/rossello.jpg'></a></li>
+  <li><a href="candidatos/4"><img src='http://i981.photobucket.com/albums/ae294/IMYG073090/candidatos-now/santiago.jpg'></a></li>
+  <li><img src=''></li>
+  <li><a href="candidatos/3"><img src='http://i981.photobucket.com/albums/ae294/IMYG073090/candidatos-now/2e6b9a8c-0dbd-41b8-b072-8b37ef9829e4.jpg'></a></li>
+  <li><a href="candidatos/5"><img src='http://i981.photobucket.com/albums/ae294/IMYG073090/candidatos-now/cidre.jpg'></a></li>
+  <li><a href="candidatos/6"><img src='http://i981.photobucket.com/albums/ae294/IMYG073090/candidatos-now/bernabe.jpg'></a></li>
+  <li><a href="candidatos/7"><img src='http://i981.photobucket.com/albums/ae294/IMYG073090/candidatos-now/e38834ff-be08-40a5-8c1f-af86da006769.jpg'></a></li>
+  <li><a href="candidatos/2"><img src='http://i981.photobucket.com/albums/ae294/IMYG073090/candidatos-now/pierluisi.png'></a></li>
+</ul>
+
+
+
+<ul class='circle-container2'>
+  <li><img src='http://i981.photobucket.com/albums/ae294/IMYG073090/candidatos-now/pnp-logo.jpg'></li>
+  <li><img src='http://i981.photobucket.com/albums/ae294/IMYG073090/candidatos-now/pip-logo.gif'></li>
+  <li><img src=''></li>
+  <li><img src='http://i981.photobucket.com/albums/ae294/IMYG073090/candidatos-now/ppd-logo.png'></li>
+  <li><img src='http://i981.photobucket.com/albums/ae294/IMYG073090/candidatos-now/cidre-logo.png'></li>
+  <li><img src='http://i981.photobucket.com/albums/ae294/IMYG073090/candidatos-now/ppt-logo.png'></li>
+  <li><img src='http://i981.photobucket.com/albums/ae294/IMYG073090/candidatos-now/lugaro-logo.png'></li>
+</ul>
+</body>
+
 </head>
-<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#000000" VLINK="#FFFFFF" ALINK="#000000" BACKGROUND="#FFFFFF" >
-  <body>
-    <div align="center">
-    
-      
-      <h1 class="text-center"> Candidatos Now</h1>
-     
-
-      <br/>
-      <a href="candidatos/1">      
-       <img src="https://pbs.twimg.com/profile_images/720037738863419392/73erg1Nw_400x400.jpg" alt="Candidate 1" style="width:250px;height:250px;" class="circular-image"> </br></br></br>
-      </a>
-      <br/>
-      <a href="candidatos/3"> 
-       <img src="http://cdn.bondbuyer.com/media/newspics/Bernier-david-from-Fortaleza.jpg" alt="Candidate 3" style="width:250px;height:250px;" class="circular-image"> </br></br>
-      </a>
-    </div>
-
-  </body>
 </html>

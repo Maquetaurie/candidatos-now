@@ -1,0 +1,233 @@
+<html lang="es">
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<script src="https://use.fontawesome.com/e47997fa7c.js"></script>
+<!-- <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+ --><link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+<style>
+body { text-align: center; padding: 0; background: #F5F5F5;}
+
+.container {  margin: auto; }
+header.first {
+  padding-bottom: 50px;
+  margin-bottom: 100px;
+}
+
+
+.copyright { margin-top: 200px; font-size: 12px; }
+.copyright a { text-decoration: none; padding: 5px;background: #c0392b; color: #FFFFFF; }
+
+p{
+  font-family: 'Inconsolata', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+.copyright a:hover { text-decoration: none; background: #fff; }
+
+.pad50{
+  padding-top: 50px;
+}
+
+.button-icon{
+    display:inline-block;
+    font-size: 30px;
+    line-height: 50px;
+    color:white;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.button {
+  margin:auto;
+  width: 350px;
+  display: inline-block;
+  height: 50px;
+  line-height: 40px;
+  padding-right: 30px;
+  padding-left: 70px;
+  position: relative;
+  background-color:rgb(0,0,0);
+  color:rgb(255,255,255);
+  text-decoration: none;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+  text-transform: none;
+-ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true)";zoom:1;
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true);
+
+  -moz-box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+  -webkit-box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+  box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#33000000,Positive=true)";
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#33000000,Positive=true);
+}
+
+.button:hover{
+    text-decoration: none;
+  color: #eeeaee;
+}
+
+.button p{font-size: 18px;}
+.button span {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  font-size:30px;
+  -webkit-border-top-left-radius: 5px;
+-webkit-border-bottom-left-radius: 5px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-bottomleft: 5px;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+border-right: 1px solid  rgba(0,0,0,0.15);
+    text-decoration: none;
+}
+
+.button.industria {
+ background: #009999;
+}
+.button.seguridad{
+  background: #009999;
+}
+.button.servicios{
+  background: #009999;
+}
+.button.politica{
+  background: #009999;
+}
+
+
+.button.educacion {
+  background: #00b386;
+}
+.button.derecho {
+  background: #00b386;
+}
+.button.salud {
+ background: #00b386;
+}
+.button.medio{
+  background: #00b386;
+}
+
+
+.button.economia{
+  background: #e6b800;
+}
+.button.legislacion {
+  background: #e6b800;
+}
+.button.turismo{
+  background: #e6b800;
+}
+.button.ciencia{
+  background: #e6b800;
+}
+
+
+.text-center{
+  text-align: center;
+}
+
+
+</style>
+</head>
+
+<body style="background-color:#ccccb3">
+
+
+<header class="w3-container w3-black first">
+
+<nav>
+  <ul class="pager" style="position:fixed; top:20px;">
+    <li class="previous"><a href="/"> <font size="6" color="black"><i class="fa fa-home" aria-hidden="true"></i></font></a></li>
+  </ul>
+</nav>
+  <h1>Candidatos Now</h1>
+</header>
+
+<div class="w3-container w3-black first">
+</div>
+
+<div class="pad30"></div>
+<div class="container">
+  <div class="row">
+    <div class=" col-sm-4 col-xs-12">
+         <a href="{{c_id}}/1" class="button industria"><span><i class="icon-fa fa-industry button-icon" ></i></span><p>Industria y Comercio</p></a>
+     </div>
+     <div class="col-sm-4 col-xs-12">
+        <a href="{{c_id}}/2" class="button educacion"><span><i class="icon-fa fa-graduation-cap button-icon"></i></span><p>Educaci&oacute;n</p></a>
+    </div>
+     <div class="col-sm-4 col-xs-12">
+      <a href="{{c_id}}/3" class="button economia"><span><i class="icon-fa fa-money button-icon"></i></span><p>Econom&iacute;a</p></a>
+    </div>
+  </div>
+
+  <div class="row">
+     <div class=" col-sm-4 col-xs-12">
+        <a href="{{c_id}}/4" class="button seguridad"><span><i class="icon-fa fa-lock button-icon" ></i></span><p>Seguridad y Criminalidad</p></a>
+       </div>
+     <div class="col-sm-4 col-xs-12">
+      <a href="{{c_id}}/5" class="button derecho"><span><i class="icon-fa fa-hand-peace-o button-icon"></i></span><p>Derecho civiles</p></a>
+       </div>
+     <div class="col-sm-4 col-xs-12">
+      <a href="{{c_id}}/6" class="button legislacion"><span><i class="icon-fa fa-legal button-icon"></i></span><p>Legislaci&oacute;n</p></a>
+       </div>
+  </div>
+
+  <div class="row"> 
+     <div class=" col-sm-4 col-xs-12">
+       <a href="{{c_id}}/7" class="button servicios"><span><i class="icon-fa fa-hospital-o button-icon"></i></span><p>Servicios p&uacute;blicos</p></a>
+    </div>
+     <div class="col-sm-4 col-xs-12">
+        <a href="{{c_id}}/8" class="button salud"><span><i class="icon-fa fa-plus-square button-icon"></i></span><p>Salud</p></a>
+      </div>
+     <div class=" col-sm-4 col-xs-12">
+        <a href="{{c_id}}/9" class="button turismo"><span><i class="icon-fa fa-suitcase button-icon"></i></span><p>Turismo</p></a>
+      </div>
+  </div>
+
+  <div class="row">
+       
+       <div class=" col-sm-4 col-xs-12">
+       <a href="{{c_id}}/10" class="button politica"><span><i class="icon-fa fa-globe button-icon"></i></span><p>Pol&iacute;tica internacional</p></a>
+        </div>
+       <div class="col-sm-4 col-xs-12">
+      <a href="#" class="button medio"><span><i class="icon-fa fa-leaf button-icon"></i></span><p>Medio ambiente</p></a>
+       </div>
+       <div class="col-sm-4 col-xs-12">
+      <a href="#" class="button ciencia"><span><i class="icon-fa fa-laptop button-icon"></i></span><p>Ciencia y Tecnolog&iacute;a</p></a>
+       </div>
+  </div>
+  
+</div>
+
+<div class="copyright">
+  <p>Forked of <a href="http://www.fwpolice.com">The Fireworks Police</a> <br>
+Recreated by Ese Coal &amp; Dammyammy
+  </p><br> <p><a href="http://techcompanionng.com">TECH COMPANION NIGERIA</a> <br>dammy at techcompanionng dot com<br>
+  ese underscore gift2001 at yahoo dot com</p>
+  <p>Brand Logos By: <a href="http://fortawesome.github.io/Font-Awesome">Font Awesome</a> &amp Brand Colors by: <a href="http://brandcolors.net/">Brand Colors</a> </p>
+
+  <h3 class="text-center">Extend &amp; Enjoy</h3>
+</div>
+
+</body>
+</html>
+
